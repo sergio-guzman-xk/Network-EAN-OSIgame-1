@@ -1,3 +1,12 @@
+# ==================================================================================================================
+# @title          :app.py
+# @description    :This is the game for the Networking Class
+# @author         :Sergio Guzman @ sergio.guzman@blackboard.com
+# @date           :2020-01-24
+# @version        :1.0
+# @usage          :app.py
+# ==================================================================================================================
+
 import os
 import sys
 import time
