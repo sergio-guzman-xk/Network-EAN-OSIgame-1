@@ -12,7 +12,7 @@ Then just download the app.py and doubleclick on it.
 Enjoy!!!
 
 ## Deliverables
-This will ask the user some questions about OSI and provide feedback on it. Have in mind that, you will only get your score if you answer all the questions you 
+This will ask the user some questions about OSI and provide feedback on it. Have in mind that, your score will be based on the number of questions you chose to answer. So if you chose to answer 5 questions but quit the app when you have only answered 2 of them the program will grade you based on the 5 questions you selected at the beginning.
 
 ## Example  
 
@@ -38,20 +38,22 @@ This is an OSI challenge so your answer should be as follows:
 Layer 1, or Layer 2. Basically the word layer followed by the layer number you think is the answer.
 Good luck!!!
 
-The question you need to answer is: pregunta9
+How many questions do you want to answer? : 3
+The question you need to answer is: pregunta4
 
-Please enter your answer: respuesta9
+Please enter your answer: pregunta4
+
+I'm sorry, that's not correct. Your score is  0.
+
+Do you want to continue? Y/N: Y
+
+The question you need to answer is: pregunta7
+
+Please enter your answer: respuesta7
 
 Congrats, that's the correct answer. Your score is 1.
 
-Do you want to continue? Y/N:Y
-
-The question you need to answer is: pregunta8
-
-Please enter your answer: Respuesta8
-
-Congrats, that's the correct answer. Your score is 2.
-
-Do you want to continue? Y/N: n
-
-Good bye...
+Do you want to continue? Y/N: N
+Thanks for playing
+Your total score is 1 out of 3.
+which is equivalent to 33.33333333333333 out of 100.
