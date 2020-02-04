@@ -136,7 +136,7 @@ class Menu:
         print('Game Rules:\n')
         print('You will choose how many questions you want to answer, each question has a score of 1.')
         print('You may quit the application after you have answer a question...')
-        print('have in mind that by doing so, you will be score for the amount of questions you chose at the beginning')
+        print('have in mind that by doing so, you will be scored for the amount of questions you chose at the beginning')
         print('At the end the game will give you a score based of 100')
         print('This is an OSI challenge so your answer should be as follows: \n')
         print('Layer 1, or Layer 2. Basically the word layer followed by the layer number you think is the answer.')
