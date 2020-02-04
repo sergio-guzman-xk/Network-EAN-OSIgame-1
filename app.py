@@ -118,6 +118,7 @@ class Menu:
             print(f'Thanks for playing')
             print(f'Your total score is {play.score} out of {play.i}.')
             print(f'which is equivalent to {Game.final_score(play.score)} out of 100.')
+            time.sleep(8.0)
             sys.exit(0)
 
     # -- Game Rules --
@@ -169,6 +170,7 @@ def main():
                     return i
         else:
             print('Good bye...')
+            time.sleep(7.5)
             sys.exit(0)
 
 
