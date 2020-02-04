@@ -162,10 +162,10 @@ def main():
             elif option == '3':
                 questions.shuffle()
                 menu.rules()
-                i = int(input('\nHow many questions do you want to answer? :'))
+                i = int(input('\nHow many questions do you want to answer?: '))
                 while i <= 0 or i > len(questions.items):
                     print(f'\nPlease enter a positive number between 1 and {len(questions.items)}.')
-                    i = int(input('\nHow many questions do you want to answer? :'))
+                    i = int(input('\nHow many questions do you want to answer?: '))
                 else:
                     return i
         else:
