@@ -12,7 +12,7 @@ Then just download the app.py and doubleclick on it.
 Enjoy!!!
 
 ## Deliverables
-This will ask the user some questions about OSI and provide feedback on it. 
+This will ask the user some questions about OSI and provide feedback on it. Have in mind that, you will only get your score if you answer all the questions you 
 
 ## Example  
 
@@ -54,3 +54,4 @@ Congrats, that's the correct answer. Your score is 2.
 
 Do you want to continue? Y/N: n
 
+Good bye...
