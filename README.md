@@ -5,14 +5,26 @@ This is the game requested in the networking course form the EAN university
 This project represents the game that was requested by the EAN university.
 
 ## Installation
-You must have Python 3 instlal. If you don't then you can download python 3.8.1 at https://www.python.org/downloads/ 
+You must have Python 3 installed. If you don't, then you can download python 3.8.1 at https://www.python.org/downloads/ 
 
 Then just download the app.py and doubleclick on it.
 
 Enjoy!!!
 
 ## Deliverables
-This will ask the user some questions about OSI and provide feedback on it. Have in mind that, your score will be based on the number of questions you chose to answer. So if you chose to answer 5 questions but quit the app when you have only answered 2 of them the program will grade you based on the 5 questions you selected at the beginning.
+This will ask the user some questions about OSI and return some feedback on it. Have in mind that your score will be based on the number of questions you chose to answer. So if you chose to answer 5 questions but quit the app when you have only answered 2 of them the program will grade you based on the 5 questions you selected at the beginning.
+
+## Usage
+
+Since this is an OSI game, your answers should be like:
+
+Layer 1
+
+or 
+
+Layer 2
+
+So it is the layer then a space and then the layer number. If you answer using a different format then the answer will be marked as incorrect. You can use both lower and capital cases.
 
 ## Example  
 
