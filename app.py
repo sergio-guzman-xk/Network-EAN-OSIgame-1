@@ -14,16 +14,68 @@ from random import shuffle
 
 # -- Pool of questions and answers respectively --
 pool = [
-    ['pregunta1', 'respuesta1'],
-    ['pregunta2', 'respuesta2'],
-    ['pregunta3', 'respuesta3'],
-    ['pregunta4', 'respuesta4'],
-    ['pregunta5', 'respuesta5'],
-    ['pregunta6', 'respuesta6'],
-    ['pregunta7', 'respuesta7'],
-    ['pregunta8', 'respuesta8'],
-    ['pregunta9', 'respuesta9'],
-    ['pregunta10', 'respuesta10']
+    ['Messenger como una herramienta para transmisión de texto on-line con otra persona, lo podemos clasificar '
+     'como parte de la capa en el sistema OSI como?', 'capa 7'],
+    ['Outlook es una herramienta que nos ayuda a visualizar nuestros correos electrónicos se asocia con la capa?',
+     'capa 7'],
+    ['Se ha vuelto muy común que todos podamos reproducir videos de música, tutoriales, etc… este proceso que nos '
+     'permite hacerlo se clasificaría en la capa?', 'capa 7'],
+    ['El modelo que la ISO utilizo para estandarizar la compresión de la transmisión de información a través de la '
+     'red se denomino OSI; este establece una capa que es el punto de inicio y fin del sistema, denominada?',
+     'capa 7'],
+    ['La capa que le permita al emisor y al receptor visualizar los datos transmitidos es?', 'capa 7'],
+    ['La forma con la que interactuamos con las maquinas se ha logrado gracias a la capa?', 'capa 7'],
+    ['Entrada y salida de datos es gracias a la capa?', 'capa 7'],
+    ['La decodificación para la recepción-visualización y envio-transmision de información es explicado en la capa?',
+     'capa 7'],
+    ['Primera capa del emisor y ultima capa del receptor según el sistema OSI?', 'capa 7'],
+    ['Si creas un documento, se clasifica este proceso en la capa? Según el modelo OSI.', 'capa 7'],
+    ['Que capa se encarga de que recibas un documento texto y no otro tipo de archivo cuando te han enviado un '
+     'documento en este formato?', 'capa 6'],
+    ['La compilación de todos los paquetes asociados se completa en la capa?', 'capa 6'],
+    ['Esta capa se encarga de realizar el envió de la información en paquetes?', 'capa 6'],
+    ['Todos los paquetes deben estar completos para que la capa de _________ pueda pasar la información a la capa '
+     'de Aplicación.',
+     'capa 6'],
+    ['Segunda y penúltima capa según el sistema de referencia OSI es:', 'capa 6'],
+    ['Sabemos que toda la información es al final solo 0 y 1, pero gracias a la esta capa esos 0 y 1 se hacen '
+     'visibles en documentos, videos, música al pasar a la capa de Aplicación.', 'capa 6'],
+    ['Cada terminal tiene un dispositivo encargado de decodificar los paquetes de datos, esto es hecho en la capa?',
+     'capa 6'],
+    ['La codificación de los datos en paquetes para su transmision lo realizamos en esta capa:', 'capa 6'],
+    ['Cuando tenemos perdida de velocidad en la red y los videos se empiezan a ver pixelados es porque la '
+     'capa________ esta decodificando los paquetes que recibe, aunque estos no lleguen con la velocidad necesaria '
+     'para mantener una buena calidad:', 'capa 6'],
+    ['Toda la información que generamos es transmitida en paquetes gracias a todo los procesos de codificación y '
+     'decodificación de datos que ocurre en la capa?', 'capa 6'],
+    ['Esta capa se encarga de establecer de donde es enviado los paquetes?', 'capa 5'],
+    ['Saber para donde va el paquete es crucial para direccionarlo correctamente, es por ello que la capa _______ '
+     'agrega su destino:', 'capa 5'],
+    ['Cada maquina y/o dispositivo debe estar plenamente identificado en la red para que pueda recibir y enviar '
+     'información sin ningún problema. Esta identificación se realiza en la capa?', 'capa 5'],
+    ['Se establece destinatario y destino?', 'capa 5'],
+    ['Rotulo del paquete que permite identificar que ha llegado a su destinatario correcto, es establecido en la capa?',
+     'capa 5'],
+    ['Le permite a la red establecer de donde proviene el paquete para clasificarlo y tener una ruta devuelta en '
+     'caso de recibir una respuesta.', 'capa 5'],
+    ['Si un paquete no llega a su destino o la respuesta no es recibida de vuelta es porque el proceso de rotulado '
+     'de origen/destino tuvo un error en la capa?', 'capa 5'],
+    ['Aquí se permite la entrada de los paquetes siempre y cuando tengan el rotulo de envío o destino en el paquete.',
+     'capa 5'],
+    ['Si la capa de _______ no rotula los paquetes, el sistema no tiene como clasificar los paquetes.', 'capa 5'],
+    ['Aquí permite ser identificado el emisor de los paquetes.', 'capa 5'],
+    ['El protocolo TCP pertenece a la capa?', 'capa 4'],
+    ['El protocolo UDP garantiza la transmisión correcta de los datos, pertenece a la capa?', 'capa 4'],
+    ['El rechazo de paquetes dañados se realiza en la capa?', 'capa 4'],
+    ['Los diferentes tipos de datos son enviados entre emisor y receptor, y todo este proceso es denominado la capa?',
+     'capa 4'],
+    ['En esta capa toma los paquetes e identifica su destino para despacharlos', 'capa 4'],
+    ['Esta capa determina si los datos se van a enviar de manera segura o no Segura.', 'capa 4'],
+    ['Toda la conexión de extremo a extremo.', 'capa 4'],
+    ['Identifica el protocolo con el que se deben enviar el tipo de dato para que sean enviado óptimamente a '
+     'través del sistema.', 'capa 4'],
+    ['Se encarga de enviar todos los paquetes en conjunto para que que lleguen a su destino.', 'capa 4'],
+    ['Hace llegar los paquetes según su rotulo de destino a su correcto destinatario.:', 'capa 4']
 ]
 
 
@@ -97,7 +149,8 @@ class Game(Pool):
             print(f'\nCongrats, that\'s the correct answer. Your score is {self.score}.\n')
             return self.score
         else:
-            print(f'\nI\'m sorry, that\'s not correct. Your score is  {self.score}.\n')
+            print(f'\nI\'m sorry, that\'s not correct. The correct answer was {correct_answer}.'
+                  f' Your score is  {self.score}.\n')
 
     @staticmethod
     def final_score(score):
