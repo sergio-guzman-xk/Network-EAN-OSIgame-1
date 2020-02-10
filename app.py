@@ -123,7 +123,7 @@ class Pool:
 
     # -- Checks how many questions there are in the pool --
     def __repr__(self):
-        return f'There are {len(self.items)} questions in the pool'
+        return f'Existen {len(self.items)} preguntas en el pool'
 
     def shuffle(self):
         shuffle(self.items)
@@ -141,7 +141,7 @@ class Format:
 
     # -- Provies the format to the questions --
     def __repr__(self):
-        return f'The question you need to answer is: {self.question}'
+        return f'La pregunta a responder es: {self.question}'
 
 
 # -- Main Class --
@@ -162,7 +162,7 @@ class Game(Pool):
             print(Format(question))
             Game.attempt(self, i)
             if i < self.i - 1:
-                stop = input(f'Do you want to continue? Y/N: ')
+                stop = input(f'Desea continuar? Y/N: ')
                 stop = stop.lower()
                 Menu.safe_quit(stop)
                 os.system('cls')
@@ -174,16 +174,16 @@ class Game(Pool):
     def attempt(self, question):
         question = question
         correct_answer = self.items[question]['answer']
-        user_answer = input('\nPlease enter your answer: ')
+        user_answer = input('\nPor favor ingrese su respuesta: ')
         user_answer = user_answer.lower()
         # -- Check if the answer is correct or not. Returns score --
         if user_answer == correct_answer:
             self.score = self.score + 1
-            print(f'\nCongrats, that\'s the correct answer. Your score is {self.score}.\n')
+            print(f'\nFelicitaciones, esa es la respuesta correcta. Su puntaje es {self.score}.\n')
             return self.score
         else:
-            print(f'\nI\'m sorry, that\'s not correct. The correct answer was {correct_answer}.'
-                  f' Your score is  {self.score}.\n')
+            print(f'\nLo siento, eso es incorrecto. La respuesta correcta era {correct_answer}.'
+                  f' Su puntaje es {self.score}.\n')
 
     @staticmethod
     def final_score(score):
@@ -195,10 +195,10 @@ class Game(Pool):
 class Menu:
     @staticmethod
     def options():
-        print(f'Press "1" to check how many questions there are in the pool')
-        print(f'Press "2" to check the questions in the pool')
-        print(f'Press "3" to start the game')
-        print(f'Press "Q" to quit.\n')
+        print(f'Presione "1" para ver la cantidad de preguntas en el pool')
+        print(f'Presione "2" para ver las preguntas del pool')
+        print(f'Presione "3" para empezar el juego')
+        print(f'Presione "Q" para salir.\n')
         user_choice = input()
         user_choice = user_choice.lower()
         return user_choice
@@ -210,23 +210,23 @@ class Menu:
         if stop == 'y':
             pass
         else:
-            print(f'Thanks for playing')
-            print(f'Your total score is {play.score} out of {play.i}.')
-            print(f'which is equivalent to {Game.final_score(play.score)} out of 100.')
+            print(f'Gracias por jugar')
+            print(f'Su puntaje total es {play.score} de {play.i}.')
+            print(f'Lo cual es equivalente a {Game.final_score(play.score)} de 100.')
             time.sleep(8.0)
             sys.exit(0)
 
     # -- Game Rules --
     @staticmethod
     def rules():
-        print('Game Rules:\n')
-        print('You will choose how many questions you want to answer, each question has a score of 1.')
-        print('You may quit the application after you have answer a question...')
-        print('have in mind that by doing so, you will be scored for the amount of questions you chose at the beginning')
-        print('At the end the game will give you a score based of 100')
-        print('This is an OSI challenge so your answer should be as follows: \n')
-        print('Layer 1, or Layer 2. Basically the word layer followed by the layer number you think is the answer.')
-        print('Good luck!!!')
+        print('Reglas de juego:\n')
+        print('Usted escojera la cantidad de preguntas a contestar. Cada pregunta vale 1.')
+        print('Usted puede salir de la aplicacion luego de contestar una pregunta')
+        print('Tenga en cuenta que al salir se le calificara basado en la cantidad de preguntas que dijo al contestar al comienzo')
+        print('Al final el juego le dara un puntaje basado en 100')
+        print('Este es un juego de la capa OSI asi que las respuestas tienen que tener este formato: \n')
+        print('Capa 1, or capa 2. Basicamente la palabra capa seguido por el numero de la capa.')
+        print('Buena suerte!!!')
         time.sleep(7.5)
         os.system('cls')
 
@@ -236,35 +236,35 @@ menu = Menu()
 
 
 def main():
-    print(f'Welcome to the OSI model game')
+    print(f'Bienvenido al juego del modelo de OSI')
     if len(questions.items) == 0:
-        print('There are no questions in the pool. The game cannot start with an empty list. \n')
-        print('Please add questions to the pool. \n')
-        print('Closing App.')
+        print('No hay preguntas en el pool. El juego no puede empezar con una lista vacia. \n')
+        print('Por favor agregue preguntas al pool. \n')
+        print('Cerrando la app.')
         sys.exit(0)
     else:
-        print(f'\nPlease choose one of the following options: ')
+        print(f'\nPor favor eliga una de las siguientes optiones: ')
         option = menu.options()
         while option != 'q':
             if option == '1':
                 print(questions)
-                print(f'\nPlease choose one of the following options: ')
+                print(f'\nPor favor eliga una de las siguientes optiones: ')
                 option = menu.options()
             elif option == '2':
                 questions.check_pool()
-                print(f'\nPlease choose one of the following options: ')
+                print(f'\nPor favor eliga una de las siguientes optiones: ')
                 option = menu.options()
             elif option == '3':
                 questions.shuffle()
                 menu.rules()
-                i = int(input('\nHow many questions do you want to answer?: '))
+                i = int(input('\nCuentas preguntas desea responder?: '))
                 while i <= 0 or i > len(questions.items):
-                    print(f'\nPlease enter a positive number between 1 and {len(questions.items)}.')
-                    i = int(input('\nHow many questions do you want to answer?: '))
+                    print(f'\nPor favor ingrese un numero positivo entre 1 y {len(questions.items)}.')
+                    i = int(input('\nCuentas preguntas desea responder?: '))
                 else:
                     return i
         else:
-            print('Good bye...')
+            print('Adios...')
             time.sleep(7.5)
             sys.exit(0)
 
